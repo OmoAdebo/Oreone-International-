@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace the placeholder host after your first Vercel deployment. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-VERCEL-URL/</loc></url>
+  <url><loc>https://YOUR-VERCEL-URL/about</loc></url>
+  <url><loc>https://YOUR-VERCEL-URL/what-we-do</loc></url>
+  <url><loc>https://YOUR-VERCEL-URL/who-we-serve</loc></url>
+  <url><loc>https://YOUR-VERCEL-URL/partnerships</loc></url>
+  <url><loc>https://YOUR-VERCEL-URL/insights</loc></url>
+  <url><loc>https://YOUR-VERCEL-URL/contact</loc></url>
+  <url><loc>https://YOUR-VERCEL-URL/privacy</loc></url>
+</urlset>
