@@ -1,25 +1,12 @@
-# Oreone International website — Vercel-ready static site
+# Oreone International Limited — hybrid static website
 
-This project contains eight static HTML pages and shared CSS/JavaScript. It is responsive and can be deployed on Vercel without a paid domain.
+Public company pages are static HTML/CSS for fast delivery. Insights uses Supabase as its CMS/database, with authenticated admin access and Row Level Security; Vercel functions render individual published article pages and generate a dynamic sitemap. Contact enquiries need a configured email form provider for direct delivery; the mail-app fallback is not the same as server-side delivery.
 
-## Preview locally
-Run `python -m http.server 8000` from this folder and open `http://localhost:8000`.
+## Deployment
+1. Upload the contents of this folder to the root of the GitHub repository connected to Vercel.
+2. In Vercel use Root Directory `./` and Framework Preset `Other`. The project includes `vercel.json` rewrites and `/api` functions.
+3. Add the environment variables listed in `HYBRID-SETUP-GUIDE.md`, then redeploy.
+4. Create the first Supabase Auth user and add their UUID to `public.oreone_admins` as described in the guide.
+5. Test draft privacy, publishing, public article rendering, sitemap and contact delivery before launch.
 
-## Deploy to Vercel (no domain purchase required)
-1. Upload this folder's contents to a new GitHub repository named `oreone-international-website`. Keep `index.html`, `styles.css`, `script.js`, `vercel.json`, `robots.txt`, `sitemap.xml` and the other HTML pages at the repository root.
-2. Sign in at https://vercel.com/ and choose **Add New → Project**.
-3. Import the GitHub repository.
-4. For a plain static site, select **Other** if asked for a framework preset. Leave Build Command and Output Directory blank; Root Directory should be `./`.
-5. Click **Deploy**. Vercel will provide a `*.vercel.app` URL.
-6. Replace `YOUR-VERCEL-URL` in `sitemap.xml` and `robots.txt` with the exact project hostname, then commit/push the changes. Add canonical tags to each page using the real Vercel URL after it is known.
-
-## Important limitations before public launch
-- The contact form opens the visitor's email application with a pre-filled draft; it does not send/store the enquiry by itself. Test it on a device with an email handler. For direct submissions, connect a form backend/service and configure spam protection.
-- Background photography currently uses external Unsplash image URLs, so an internet connection is needed to load those images. Review image licensing and replace with approved assets if desired.
-- The logo is a CSS text treatment as requested.
-- The Insights page is a framework for future articles; do not publish fabricated articles or research claims.
-- Review the privacy notice and all copy before launch.
-- Confirm Vercel's current plan terms are appropriate for a public business website before relying on free hosting.
-
-## Pages
-Home, About, What We Do, Who We Serve, Partnerships, Insights, Contact, Privacy Notice.
+Do not add Supabase secret/service-role keys to browser files or GitHub.
